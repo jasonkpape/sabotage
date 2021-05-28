@@ -69,20 +69,25 @@
 	var SIDETOANIMATE;
 	var COMMANDOSSHOT;
 	var CHOPPERSSHOT;
-	var gblTurretSpriteInterval;	// A reference to the interval that animates the turret spritesheet
-	var gblTurretAnimating;			// Whether or not the turret is animating
+	var gblTurretSpriteInterval;		// A reference to the interval that animates the turret spritesheet
+	var gblTurretAnimating;				// Whether or not the turret is animating
 	
-	var gblSpriteCounter1 = 0;		// Animation counter for moveSprite1 function
-	var gblSpriteCounter2 = 0; 		// Animation counter for moveSprite2 function
-	var gblSpriteDownVel1 = 1;		// Falling velocity of explode1
-	var gblSpriteDownVel2 = 1;		// Falling velocity of explode2
-	var gblChopperAnimateInterval1;	// For animating the chopper1 spritesheet
-	var gblChopperAnimateInterval2;	// For animating the chopper2 spritesheet
-	var gblSplashChopperInterval;	// For animating the chopper spritesheet on the splash screen
-	var gblSplashBotInterval;		// For animating the bot ("commando") spritesheet on the splash screen
-	var gblOpeningChopperInterval;	// For animating the hovercraft ("chopper") spritesheet in the opening scene
-	var gblSummaryChopperInterval;	// For animating the hovercraft ("chopper") spritesheet in the summary scene
-	var botExplodeInterval = [];	// An array of intervals controlling explosion spritesheets for bots stuck by cannon fire
+	var gblSpriteCounter1 = 0;			// Animation counter for moveSprite1 function
+	var gblSpriteCounter2 = 0; 			// Animation counter for moveSprite2 function
+	var gblSpriteDownVel1 = 1;			// Falling velocity of explode1
+	var gblSpriteDownVel2 = 1;			// Falling velocity of explode2
+	var gblChopperAnimateInterval1;		// For animating the chopper1 spritesheet
+	var gblChopperAnimateInterval2;		// For animating the chopper2 spritesheet
+	var gblSplashChopperInterval;		// For animating the chopper spritesheet on the splash screen
+	var gblSplashBotInterval;			// For animating the bot ("commando") spritesheet on the splash screen
+	var gblOpeningChopperInterval;		// For animating the hovercraft ("chopper") spritesheet in the opening scene
+	var gblSummaryChopperInterval;		// For animating the hovercraft ("chopper") spritesheet in the summary scene
+	var gblBotExplodeInterval = [];		// An array of intervals controlling explosion spritesheets for bots stuck
+										// by cannon fire
+										
+	var gblControlScheme = "keyboard";	// Either "keyboard" or "touchscreen"
+	var gblBotObjects = [];				// An array of objects identifying bot ("commando") ids and
+										// explosion-animation intervals
 	</script>
 
 	<!-- end copy -->
@@ -91,7 +96,7 @@
 	<!-- copy these lines to your document: -->
 
 	<div id="index_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:800px;height:600px;overflow:hidden;">
-		<script type="text/javascript" charset="utf-8" src="index.hyperesources/index_hype_generated_script.js?8301"></script>
+		<script type="text/javascript" charset="utf-8" src="index.hyperesources/index_hype_generated_script.js?19367"></script>
 	</div>
 
 	<!-- end copy -->
@@ -120,7 +125,7 @@ by Jason Pape</div>
 		<div>Klaxon 1</div>
 		<div>CONTINUE</div>
 		<div>Klaxon 3</div>
-		<div>MeltSlimeTM acid hoses. Intercepted plans indicate that they</div>
+		<div>MeltSlimeTM acid hoses. Intercepted plans indicate they</div>
 		<div>Use the arrow keys to rotate and spacebar to fire.</div>
 		<div>000000</div>
 		<div>×5 Points</div>
@@ -134,6 +139,10 @@ by Jason Pape</div>
 		<div>Playtested by Lena & Orion</div>
 		<div>Total</div>
 		<div>Morse code generated using the Morse Code Translator at MorseCode.World</div>
+		<div>KEYBOARD</div>
+		<div>Choose your control scheme:</div>
+		<div>TOUCHSCREEN</div>
+		<div></div>
 
 	</div>
 
