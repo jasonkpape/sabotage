@@ -23,6 +23,11 @@
 	<link href='https://fonts.googleapis.com/css?family=Oxanium&subset=latin' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=VT323&subset=latin' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=PT+Mono&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Quicksand&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Quicksand:700&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Almendra+Display&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Amita&subset=latin' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Archivo&subset=latin' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="index.hyperesources/jquery.js"></script>
 	
 	<script>
@@ -82,12 +87,14 @@
 	var gblSplashBotInterval;			// For animating the bot ("commando") spritesheet on the splash screen
 	var gblOpeningChopperInterval;		// For animating the hovercraft ("chopper") spritesheet in the opening scene
 	var gblSummaryChopperInterval;		// For animating the hovercraft ("chopper") spritesheet in the summary scene
-	var gblBotExplodeInterval = [];		// An array of intervals controlling explosion spritesheets for bots stuck
+	//var gblBotExplodeInterval = [];		// An array of intervals controlling explosion spritesheets for bots stuck
 										// by cannon fire
 										
 	var gblControlScheme = "keyboard";	// Either "keyboard" or "touchscreen"
 	var gblBotObjects = [];				// An array of objects identifying bot ("commando") ids and
 										// explosion-animation intervals
+	
+	var gblSteerable = false;			// Whether or not the projectiles are steerable with the direction controls
 	</script>
 
 	<!-- end copy -->
@@ -96,7 +103,7 @@
 	<!-- copy these lines to your document: -->
 
 	<div id="index_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:800px;height:600px;overflow:hidden;">
-		<script type="text/javascript" charset="utf-8" src="index.hyperesources/index_hype_generated_script.js?48985"></script>
+		<script type="text/javascript" charset="utf-8" src="index.hyperesources/index_hype_generated_script.js?19038"></script>
 	</div>
 
 	<!-- end copy -->
@@ -139,10 +146,17 @@ by Jason Pape</div>
 		<div>Playtested by Lena & Orion</div>
 		<div>Total</div>
 		<div>Morse code generated using the Morse Code Translator at MorseCode.World</div>
-		<div>KEYBOARD</div>
 		<div>Choose your control scheme:</div>
+		<div>NO</div>
 		<div>TOUCHSCREEN</div>
+		<div>YES</div>
+		<div>KEYBOARD</div>
+		<div>Do you want to use steerable projectiles?</div>
 		<div></div>
+		<div>Mergers, Acquisitions & Games</div>
+		<div>— Alvin Stomach, author of Friend and Mentor: A Proprietary Tale</div>
+		<div>“That feeling you can't describe”</div>
+		<div>Vippoid & Blech</div>
 
 	</div>
 
