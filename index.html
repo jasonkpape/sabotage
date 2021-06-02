@@ -91,10 +91,20 @@
 										// by cannon fire
 										
 	var gblControlScheme = "keyboard";	// Either "keyboard" or "touchscreen"
-	var gblBotObjects = [];				// An array of objects identifying bot ("commando") ids and
+	var gblBotObjects;				// An array of objects identifying bot ("commando") ids and
 										// explosion-animation intervals
 	
 	var gblSteerable = false;			// Whether or not the projectiles are steerable with the direction controls
+	var gblBotNum = 0;					// To keep track of the bots during the game-over animation sequence
+	var gblCurrentlyShooting = false;	// Flag set when spacebar pressed or fire button activated;
+	var gblMusicFadeInterval;			// For fading out the music during the game-over sequence
+	
+	var gblSlotArray;					// This is an array that will contain objects detailing which slots that a bot
+										// can parachute into are available
+										
+	var gblChopper1SlotArray;				// This holds an array of slots in use by chopper1
+	var gblChopper2SlotArray;				// This holds an array of slots in use by chopper2
+
 	</script>
 
 	<!-- end copy -->
@@ -103,7 +113,7 @@
 	<!-- copy these lines to your document: -->
 
 	<div id="index_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:800px;height:600px;overflow:hidden;">
-		<script type="text/javascript" charset="utf-8" src="index.hyperesources/index_hype_generated_script.js?19038"></script>
+		<script type="text/javascript" charset="utf-8" src="index.hyperesources/index_hype_generated_script.js?34663"></script>
 	</div>
 
 	<!-- end copy -->
@@ -128,35 +138,36 @@ by Jason Pape</div>
 		<div>YOU are our final hope for sustained weather monitoring.</div>
 		<div>Klaxon 2</div>
 		<div>Radar has detected hostile crafts carrying drones equipped with</div>
-		<div>Prevent 4 drones from landing on either side of the cannon!</div>
+		<div>Prevent four drones from landing on either side of the cannon!</div>
 		<div>Klaxon 1</div>
 		<div>CONTINUE</div>
 		<div>Klaxon 3</div>
 		<div>MeltSlimeTM acid hoses. Intercepted plans indicate they</div>
 		<div>Use the arrow keys to rotate and spacebar to fire.</div>
-		<div>000000</div>
 		<div>×5 Points</div>
-		<div>Based on Sabotage by Mark Allen</div>
-		<div>000 Shot</div>
-		<div>Programming by Darren Pearson & Jason Pape</div>
-		<div>×25 Points</div>
-		<div>Graphics, Music & Sound FX by Jason Pape</div>
-		<div>PLAY AGAIN?</div>
-		<div>SHOT SUMMARY</div>
-		<div>Playtested by Lena & Orion</div>
-		<div>Total</div>
+		<div>000000</div>
 		<div>Morse code generated using the Morse Code Translator at MorseCode.World</div>
+		<div>SHOT SUMMARY</div>
+		<div>Graphics, Music & Sound FX by Jason Pape</div>
+		<div>000 Shot</div>
+		<div>Total</div>
+		<div>Based on Sabotage by Mark Allen</div>
+		<div>PLAY AGAIN?</div>
+		<div>×25 Points</div>
+		<div>Playtested by Lena & Orion</div>
+		<div>Programming by Darren Pearson & Jason Pape</div>
 		<div>Choose your control scheme:</div>
 		<div>NO</div>
 		<div>TOUCHSCREEN</div>
 		<div>YES</div>
 		<div>KEYBOARD</div>
 		<div>Do you want to use steerable projectiles?</div>
+		<div>main theme</div>
 		<div></div>
 		<div>Mergers, Acquisitions & Games</div>
 		<div>— Alvin Stomach, author of Friend and Mentor: A Proprietary Tale</div>
-		<div>“That feeling you can't describe”</div>
 		<div>Vippoid & Blech</div>
+		<div>“That feeling you can't describe”</div>
 
 	</div>
 
